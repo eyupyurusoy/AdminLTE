@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Registration Page</title>
+  <title>KOMSUELİ | Registration Page</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,16 +21,16 @@
 <body class="hold-transition register-page">
 <div class="register-box">
   <div class="register-logo">
-    <a href="../../index2.html"><b>Admin</b>LTE</a>
+    <a href="../../index2.html"><b>KOMSU</b>ELİ</a>
   </div>
 
   <div class="card">
     <div class="card-body register-card-body">
-      <p class="login-box-msg">Register a new membership</p>
+      <p class="login-box-msg">Hesap Olustur</p>
 
       <form action="../../index.html" method="post">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Full name">
+          <input type="text" class="form-control" placeholder="Ad Soyad">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-user"></span>
@@ -38,7 +38,15 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email">
+          <input type="text" class="form-control" placeholder="Adres">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="far fa-building"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="email" class="form-control" placeholder="Mail">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -46,51 +54,65 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" class="form-control" placeholder="Telefon">
           <div class="input-group-append">
             <div class="input-group-text">
-              <span class="fas fa-lock"></span>
+              <span class="fas fa-phone-volume"></span>
             </div>
           </div>
         </div>
+
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Retype password">
+          <input type="password" class="form-control" placeholder="Şifre">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
             </div>
           </div>
         </div>
+
+        <div class="input-group mb-3">
+          <div class="col-8">
+            <div class="input-group-append">
+          <select name="example-select" required="true" class="form-control" placeholder="Select an option">
+            <option value="opt1">Yardım etmek istiyorum</option>
+            <option value="opt2">Yardım almak istiyorum</option>
+            <option value="opt3">Hepsi</option>
+          </select>
+          </div> </div>
+        </div>
+
         <div class="row">
           <div class="col-8">
             <div class="icheck-primary">
               <input type="checkbox" id="agreeTerms" name="terms" value="agree">
               <label for="agreeTerms">
-               I agree to the <a href="#">terms</a>
+                <a href="#">Üyelik sözleşmesini</a> okudum
               </label>
             </div>
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Register</button>
+
+            <a href="../../starter2.html" class="btn btn-primary btn-block">Üye Ol</a>
           </div>
           <!-- /.col -->
         </div>
       </form>
 
       <div class="social-auth-links text-center">
-        <p>- OR -</p>
+        <p>- veya -</p>
         <a href="#" class="btn btn-block btn-primary">
           <i class="fab fa-facebook mr-2"></i>
-          Sign up using Facebook
+           Facebook ile üye ol
         </a>
         <a href="#" class="btn btn-block btn-danger">
           <i class="fab fa-google-plus mr-2"></i>
-          Sign up using Google+
+           Google ile üye ol
         </a>
       </div>
 
-      <a href="login.html" class="text-center">I already have a membership</a>
+      <a href="login.html" class="text-center">Zaten üyeyim</a>
     </div>
     <!-- /.form-box -->
   </div><!-- /.card -->
@@ -101,7 +123,7 @@
 <script src="../../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
+<!-- Adminp App -->
 <script src="../../dist/js/adminlte.min.js"></script>
 </body>
 </html>
