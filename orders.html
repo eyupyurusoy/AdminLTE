@@ -224,28 +224,33 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         <div class="container-fluid">
           <div class="row">
-  
+            
             <!-- /.modal-dialog -->
             <div class="modal fade" id="modal-info">
               <div class="modal-dialog">
                 <div class="modal-content bg-info">
                   <div class="modal-header">
-                    <h4 class="modal-title">Fiyat Bilgisi</h4>
+                    <h4 class="modal-title">Teslim Mesajı</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span></button>
                   </div>
                   <div class="modal-body">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">€</span>
+                    <div class="col-sm-2">
+                      <div class="form-group">
+                        <label>Teslimat Bilgisi</label>
+                        <select class="form-control">
+                          <option>Teslim Edildi</option>
+                          <option>Evinde Bulunamadı</option>
+                          <option>Yağmur Yağıyordu</option>
+                          <option>Seller Akıyordu</option>
+                          <option>Arap Kızı Camdan Bakıyordu</option>
+                        </select>
                       </div>
-                      <input type="text" class="form-control">
-                     
                     </div>
                   </div>
                   <div class="modal-footer justify-content-between">
-                    <button type="button" class="btn btn-outline-light" data-dismiss="modal">Kapat</button>
-                    <button type="button"  onclick="deleteRow()" class="btn btn-outline-light swalDefaultSuccess" data-dismiss="modal">Fiyatı Onayla</button>
+                    <button type="button" onclick="failed()" class="btn btn-danger" data-dismiss="modal">Teslim Edilemedi.</button>
+                    <button type="button"  onclick="success()" class="btn btn-success swalDefaultSuccess" data-dismiss="modal">Teslim Edildi.</button>
                   </div>
                 </div>
                 <!-- /.modal-content -->
@@ -284,48 +289,48 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           
                           <td>
                             <div  class="hold-transition sidebar-mini">
-                              <button type="button" class="btn btn-info"   >
+                              <button type="button" class="btn btn-info"  data-toggle="modal" data-target="#modal-info" >
                                 OR9840
                                 </button>
                             </div>
                             
                           </td>
                           <td>Süt, Yumurta</td>
-                          <td><span class="badge badge-warning">Bekliyor</span></td>
+                          <td><span  id = "1" class="badge badge-warning">Bekliyor</span></td>
                          
                         </tr>
                         <tr>
                           <td>
                             <div id="test"  class="hold-transition sidebar-mini">
-                              <button type="button" class="btn btn-info"   >
+                              <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info"  >
                                 OR9841
                                 </button>
                             </div>
                             
                           </td>
                           <td>Tavuk, Peynir</td>
-                          <td><span class="badge badge-warning">Bekliyor</span></td>
+                          <td><span id="2" class="badge badge-warning">Bekliyor</span></td>
                          
                         </tr>
                         <tr>
                           
                           <td>
                             <div  class="hold-transition sidebar-mini">
-                              <button type="button" class="btn btn-info"   >
+                              <button type="button" class="btn btn-info"  data-toggle="modal" data-target="#modal-info" >
                                 OR9842
                                 </button>
                             </div>
                             
                           </td>
                           <td>2 kg kıyma</td>
-                          <td><span class="badge badge-primary">Yolda</span></td>
+                          <td><span id="3" class="badge badge-primary">Yolda</span></td>
                          
                         </tr>
                         <tr>
                           
                           <td>
                             <div  class="hold-transition sidebar-mini">
-                              <button type="button" class="btn btn-info"   >
+                              <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info"  >
                                 OR9843
                                 </button>
                             </div>
@@ -339,7 +344,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           
                           <td>
                             <div  class="hold-transition sidebar-mini">
-                              <button type="button" class="btn btn-info"   >
+                              <button type="button" class="btn btn-info"  data-toggle="modal" data-target="#modal-info" >
                                 OR9844
                                 </button>
                             </div>
@@ -411,6 +416,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- ./wrapper -->
 
 <!-- REQUIRED SCRIPTS -->
+<script> 
+  var el_up = document.getElementById("kadir"); 
+  var el_down = document.getElementById("GFG_DOWN"); 
+  var str = "Click on button to change the background color"; 
+
+  
+
+  function success() { 
+    document.getElementById("2").style.backgroundColor = "green";
+    document.getElementById("2").innerHTML="<span style='color: white;'>Tamamlandı</span>";
+  } 
+    
+  function failed() { 
+    document.getElementById("1").style.backgroundColor = "red";
+    document.getElementById("1").innerHTML="<span style='color: white;'>İptal Edildi</span>";
+  }          
+</script>  
 
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
