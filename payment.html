@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ödeme Sayfası</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="plugins/payment/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/payment/font-awesome/css/font-awesome.min.css" />
+
+    <script type="text/javascript" src="plugins/payment/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="plugins/payment/bootstrap/js/bootstrap.min.js"></script>
+
+       <!-- SweetAlert2 -->
+   <link rel="stylesheet" href="plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+   <!-- Toastr -->
+   <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="page-header" >
+    <h1>Ödeme Sayfası</h1>
+</div>
+
+<!-- Credit Card Payment Form - START -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-4 col-md-offset-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="row">
+                        <h3 class="text-center">Ödeme Detayları</h3>
+                        <img class="img-responsive cc-img" src="http://www.prepbootstrap.com/Content/images/shared/misc/creditcardicons.png">
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <form role="form">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label>Kart Numarası</label>
+                                    <div class="input-group">
+                                        <input type="tel" class="form-control" placeholder="Geçerli Kart Numaranızı Giriniz" />
+                                        <span class="input-group-addon"><span class="fa fa-credit-card"></span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-7 col-md-7">
+                                <div class="form-group">
+                                    <label><span class="hidden-xs">Son Kullanım Tarihi</span><span class="visible-xs-inline">Son Kullanım</span> Tarihi</label>
+                                    <input type="tel" class="form-control" placeholder="MM / YY" />
+                                </div>
+                            </div>
+                            <div class="col-xs-5 col-md-5 pull-right">
+                                <div class="form-group">
+                                    <label>Güvenlik Kodu</label>
+                                    <input type="tel" class="form-control" placeholder="CVC" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label>Kart Sahibinin Adı-Soyadı</label>
+                                    <input type="text" class="form-control" placeholder="Kart Sahibinin Adı Soyadı" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-xs-12">
+                                <button class="btn btn-warning btn-lg btn-block toastrDefaultSuccess">
+                                    Ödeme İşlemini Tamamla
+                                </button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .cc-img {
+        margin: 0 auto;
+    }
+    
+    div h1 {
+        text-align: center;
+    }
+</style>
+<!-- Credit Card Payment Form - END -->
+
+</div>
+<!-- Toastr -->
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+<!-- REQUIRED SCRIPTS -->
+
+<script src="plugins/sweetalert2/sweetalert2.min.js"></script>
+<!-- Toastr -->
+<script src="plugins/toastr/toastr.min.js"></script>
+
+
+<script>
+    function myFunction() {
+    setTimeout(function(){ alert("After 5 seconds!"); }, 5000);
+      location.replace("starter.html")
+    }
+</script>
+
+<script type="text/javascript">
+  $(function() {
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 2000
+    });
+
+    $('.swalDefaultSuccess').click(function() {
+      Toast.fire({
+        icon: 'success',
+        title: 'Fiyat Bilgisi Gönderildi.'
+      })
+    }); 
+    $('.toastrDefaultSuccess').click(function() {
+      toastr.success('Ödemeniz Başarı Şekilde Gerçekleşmiştir.')
+      setTimeout(() => {  location.replace("starter.html"); }, 1000);
+      
+    }); 
+  });
+  </script>
+</body>
+</html>
