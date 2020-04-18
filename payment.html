@@ -111,13 +111,6 @@
 <script src="plugins/toastr/toastr.min.js"></script>
 
 
-<script>
-    function myFunction() {
-    setTimeout(function(){ alert("After 5 seconds!"); }, 5000);
-      location.replace("starter.html")
-    }
-</script>
-
 <script type="text/javascript">
   $(function() {
     const Toast = Swal.mixin({
@@ -135,7 +128,7 @@
     }); 
     $('.toastrDefaultSuccess').click(function() {
       toastr.success('Ödemeniz Başarı Şekilde Gerçekleşmiştir.')
-      setTimeout(() => {  location.replace("starter.html"); }, 1000);
+      setTimeout(() => {  location.replace("starter2.html"); }, 1000);
       
     }); 
   });
