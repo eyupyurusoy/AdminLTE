@@ -231,7 +231,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Ana Sayfa Akışı</h1>
+            <h4 class="m-0 text-dark">Ana Sayfa Akışı</h4>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -265,9 +265,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="row">
               <div class="col-md-12">
                 <div class="form-group">
-                  <label>Market</label>
-                  <select class="form-control select2bs4" style="width: 100%;">
-                    <option selected="selected"></option>
+                  <label>İhtiyaç</label>
+                  <select id="market" class="form-control select2bs4" style="width: 100%;">
+                    <option value="0" selected="selected"></option>
                     <option>Şen Kardeşler Manav</option>
                     <option>Öz Karadeniz Market</option>
                     <option>Bizim Kasap</option>
@@ -288,15 +288,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="col-sm-12">
               <!-- textarea -->
               <div class="form-group">
-                <label>İhtiyaç</label>
-                <textarea class="form-control" rows="2" placeholder="Yazınız ..."></textarea>
+                <label>Açıklama</label>
+                <textarea id="textarea1" class="form-control" rows="2" placeholder="Yazınız ..."></textarea>
               </div>
             </div>
           </div>
             <div class="row">
               <div class="col-sm-3">
                 <div class="form-group">
-                <button type="submit" class="btn btn-primary">Paylaş</button>
+                <button type="submit" onclick="post()" class="btn btn-primary">Paylaş</button>
                 </div>
               </div>
             </div>
@@ -323,9 +323,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <div class="col-md-9">
             <div class="card">
 
-              <div id="mainFlow" class="card-body">
+              <div class="card-body">
                 <div class="tab-content">
-                  <div class="active tab-pane" id="activity">
+                  <div   class="active tab-pane" id="activity">
                     <!-- Post -->
                     <div class="post">
                       <div class="user-block">
@@ -716,6 +716,36 @@ scratch. This page gets rid of all links and provides the needed markup only.
     });
 
   })
+</script>
+
+<script>
+function formatAMPM(date) {
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var ampm = hours >= 12 ? 'AM' : 'PM';
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? '0'+minutes : minutes;
+  var strTime = hours + ':' + minutes + ' ' + ampm;
+  return strTime;
+}
+function post() {
+ //document.getElementById('activity').appendChild('<div class="post">                       <div class="user-block">                         <img class="img-circle img-bordered-sm" src="dist/img/user1-128x128.jpg" alt="user image">                         <span class="username">                           <a href="#">Eyüp Yürüsoy</a>                           <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>                         </span>                         <span class="description">Herkes görebilir - 7:30 PM bugün</span>                       </div>                       <!-- /.user-block -->                       <p>                         Test                       </p>                        <p>                          <a href="#" class="link-black text-sm"><i class="far fa-thumbs-up mr-1"></i> Yardım</a>                         <span class="float-right">                           <a href="#" class="link-black text-sm">                             <i class="far fa-comments mr-1"></i> Yorum yap (5)                           </a>                         </span>                       </p>                        <input class="form-control form-control-sm" type="text" placeholder="Yorum Yap">                     </div>');
+  const div = document.createElement('div');
+var d = new Date();
+  div.className = 'row';
+
+  div.innerHTML = `
+    <div class="post">                       <div class="user-block">                         <img class="img-circle img-bordered-sm" src="dist/img/user1-128x128.jpg" alt="user image">                         <span class="username">                           <a href="#">Eyüp Yürüsoy</a>                           <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>                         </span>                         <span class="description">Herkes görebilir - `
+    +formatAMPM(new Date)+` bugün</span>                       </div>                       <!-- /.user-block -->                       <p>                         `
+    +document.getElementById('textarea1').value+
+    `                        </p>                        <p>                          <a href="#" class="link-black text-sm"><i class="far fa-thumbs-up mr-1"></i> Yardım</a>                         <span class="float-right">                           <a href="#" class="link-black text-sm">                             <i class="far fa-comments mr-1"></i> Yorum yap (5)                           </a>                         </span>                       </p>                        <input class="form-control form-control-sm" type="text" placeholder="Yorum Yap">                     </div>
+  `;
+
+  document.getElementById('activity').innerHTML = div.innerHTML+document.getElementById('activity').innerHTML
+ document.getElementById("textarea1").value = '';
+
+}
 </script>
 </body>
 </html>
