@@ -35,11 +35,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Bootstrap4 Duallistbox -->
   <link rel="stylesheet" href="plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
 
-
-  <!-- SweetAlert2 -->
-  <link rel="stylesheet" href="plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
-  <!-- Toastr -->
-  <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
+<!-- SweetAlert2 -->
+<link rel="stylesheet" href="plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+ <!-- Toastr -->
+ <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
 
 </head>
 <body class="hold-transition sidebar-mini">
@@ -54,7 +53,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="starter2.html" class="nav-link">Anasayfa</a>
+        <a href="#" class="nav-link">Anasayfa</a>
       </li>
      
     </ul>
@@ -123,33 +122,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </div>
       </li>
       <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
+       <!-- Notifications Dropdown Menu -->
+       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-bell"></i>
-          <span class="badge badge-warning navbar-badge">15</span>
+          <span class="badge badge-warning navbar-badge">1</span>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <span class="dropdown-header">15 Bildirim</span>
+          <span class="dropdown-header">1 Bildirim</span>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-envelope mr-2"></i> 3 yeni mesaj
-            <span class="float-right text-muted text-sm">3 dakika</span>
-          </a>
+          
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-users mr-2"></i> 9 arkadaşlık isteği
-            <span class="float-right text-muted text-sm">12 saat</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-file mr-2"></i> 3 yeni rapor
-            <span class="float-right text-muted text-sm">2 gün</span>
+          <a href="payment.html" class="dropdown-item">
+            <i class="fas fa-file mr-2"></i> 1 yeni ödeme
+            <span class="float-right text-muted text-sm">Biraz önce</span>
           </a>
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item dropdown-footer">Tüm Bildirimleri Gör</a>
         </div>
       </li>
-     
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -168,10 +159,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="dist/img/avatar5.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Eyüp Yürüsoy</a>
+          <a href="#" class="d-block">Serkan Akkaya</a>
         </div>
       </div>
 
@@ -190,15 +181,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="orders.html" class="nav-link active">
+                <a href="carrierOrders.html" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Siparişlerim</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Çevremdeki Kişiler</p>
+                  <p>Ürün Teslimatlarım</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -208,12 +193,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
               <li class="nav-item">
-                <a href="zehra.html" class="nav-link active">
+                <a href="#" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Kişi bul</p>
+                  <p>Hakkında</p>
                 </a>
               </li>
-            
             </ul>
           </li>
          
@@ -234,7 +218,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h4 class="m-0 text-dark">Ana Sayfa Akışı</h4>
+            <h1 class="m-0 text-dark">Kurye Hizmetleri</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -254,60 +238,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- /.card -->
 
         <!-- SELECT2 EXAMPLE -->
-        <div class="card card-default col-md-9">
-          <div class="card-header">
-            <h4 class="card-title">Yardım İste</h4>
-
-            <div class="card-tools">
-              <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
-              <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
-            </div>
-          </div>
-          <!-- /.card-header -->
-          <div class="card-body">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="form-group">
-                  <label>İhtiyaç</label>
-                  <select id="market" class="form-control select2bs4" style="width: 100%;">
-                    <option value="0" selected="selected"></option>
-                    <option>Şen Kardeşler Manav</option>
-                    <option>Öz Karadeniz Market</option>
-                    <option>Bizim Kasap</option>
-                    <option>Özyapar Nalburiye</option>
-                    <option>Öz Kardeşler 2 Market</option>
-                  </select>
-                </div>
-                <!-- /.form-group -->
-
-                <!-- /.form-group -->
-              </div>
-              <!-- /.col -->
-
-              <!-- /.col -->
-            </div>
-
-          <div class="row">
-            <div class="col-sm-12">
-              <!-- textarea -->
-              <div class="form-group">
-                <label>Açıklama</label>
-                <textarea id="textarea1" class="form-control" rows="2" placeholder="Yazınız ..."></textarea>
-              </div>
-            </div>
-          </div>
-            <div class="row">
-              <div class="col-sm-3">
-                <div class="form-group">
-                <button type="submit" onclick="post()" class="btn btn-primary">Paylaş</button>
-                </div>
-              </div>
-            </div>
-            <!-- /.row -->
-          </div>
-          <!-- /.card-body -->
-
-        </div>
+      
         <!-- /.card -->
 
 
@@ -329,6 +260,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="card-body">
                 <div class="tab-content">
                   <div   class="active tab-pane" id="activity">
+                    <div class="post">
+                      <div class="user-block">
+                        <img class="img-circle img-bordered-sm" src="dist/img/eyup.jpg" alt="user image">
+                        <span class="username">
+                          <a href="#">Eyüp Yürüsoy</a>
+                          <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>
+                        </span>
+                        <span class="description">Herkes görebilir - 10:30 AM bugün</span>
+                      </div>
+                      <!-- /.user-block -->
+                      <p>
+                       Kanaat Bakkaliyesi Ürün Teslimatı 
+                      </p>
+                      <p>
+                        Süt, Yumurta, Ekmek 
+                       </p>
+                      <p>
+                        <a href="#" class="toastrDefaultSuccess link-black text-sm "><i class="far fa-thumbs-up mr-1"></i>  Üstlen</a>
+                      </p>
+                    </div>
                     <!-- Post -->
                     <div class="post">
                       <div class="user-block">
@@ -337,15 +288,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           <a href="#">Ahmet Yavuz</a>
                           <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>
                         </span>
-                        <span class="description">Herkes görebilir - 7:30 PM bugün</span>
+                        <span class="description">Herkes görebilir - 7:30 AM bugün</span>
                       </div>
                       <!-- /.user-block -->
                       <p>
-                        Maskem olmadığı için dışarı çıkamıyordum Ayse hanım yetişti saolsun maskemizi temin etti :)
+                       Ücretli kuru temizlemeden kıyafetlerimi getirebilecek var mı?
                       </p>
 
                       <p>
-                        <a href="#" class="toastrDefaultSuccess link-black text-sm "><i class="far fa-thumbs-up mr-1"></i> Yardım</a>
+                        <a href="#" class="toastrDefaultSuccess link-black text-sm "><i class="far fa-thumbs-up mr-1"></i>  Üstlen</a>
                       </p>
                     </div>
                     <!-- /.post -->
@@ -362,12 +313,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       </div>
                       <!-- /.user-block -->
                       <p>
-                        Eşim ve ben 65 yaşın üstündeyiz bu yüzden dışarı çıkamıyoruz, marketlerde veya kargo parası emekliler için bir yük bu uygulamayı çok seviyoruz. Ayşe bize bugüne kadar çok yardımcı oldu teşekkür ederiz.
+                        Eczaneden ilaçlarımı ücret karşılığında alıp getirebilecek var mı?
                       </p>
 
                       <p>
                         <a href="#" class="link-black text-sm toastrDefaultSuccess"><i class=" far fa-thumbs-up mr-1"></i>
-                        Yardım
+                         Üstlen
                          </a>
                       </p>
                     </div>
@@ -387,85 +338,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           10 Feb. 2014
                         </span>
                       </div>
-                      <!-- /.timeline-label -->
-                      <!-- timeline item -->
-                      <div>
-                        <i class="fas fa-envelope bg-primary"></i>
-
-                        <div class="timeline-item">
-                          <span class="time"><i class="far fa-clock"></i> 12:05</span>
-
-                          <h3 class="timeline-header"><a href="#">Support Team</a> sent you an email</h3>
-
-                          <div class="timeline-body">
-                            Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
-                            weebly ning heekya handango imeem plugg dopplr jibjab, movity
-                            jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle
-                            quora plaxo ideeli hulu weebly balihoo...
-                          </div>
-                          <div class="timeline-footer">
-                            <a href="#" class="btn btn-primary btn-sm">Read more</a>
-                            <a href="#" class="btn btn-danger btn-sm">Delete</a>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- END timeline item -->
-                      <!-- timeline item -->
-                      <div>
-                        <i class="fas fa-user bg-info"></i>
-
-                        <div class="timeline-item">
-                          <span class="time"><i class="far fa-clock"></i> 5 mins ago</span>
-
-                          <h3 class="timeline-header border-0"><a href="#">Sarah Young</a> accepted your friend request
-                          </h3>
-                        </div>
-                      </div>
-                      <!-- END timeline item -->
-                      <!-- timeline item -->
-                      <div>
-                        <i class="fas fa-comments bg-warning"></i>
-
-                        <div class="timeline-item">
-                          <span class="time"><i class="far fa-clock"></i> 27 mins ago</span>
-
-                          <h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
-
-                          <div class="timeline-body">
-                            Take me to your leader!
-                            Switzerland is small and neutral!
-                            We are more like Germany, ambitious and misunderstood!
-                          </div>
-                          <div class="timeline-footer">
-                            <a href="#" class="btn btn-warning btn-flat btn-sm">View comment</a>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- END timeline item -->
-                      <!-- timeline time label -->
-                      <div class="time-label">
-                        <span class="bg-success">
-                          3 Jan. 2014
-                        </span>
-                      </div>
-                      <!-- /.timeline-label -->
-                      <!-- timeline item -->
-                      <div>
-                        <i class="fas fa-camera bg-purple"></i>
-
-                        <div class="timeline-item">
-                          <span class="time"><i class="far fa-clock"></i> 2 days ago</span>
-
-                          <h3 class="timeline-header"><a href="#">Mina Lee</a> uploaded new photos</h3>
-
-                          <div class="timeline-body">
-                            <img src="http://placehold.it/150x100" alt="...">
-                            <img src="http://placehold.it/150x100" alt="...">
-                            <img src="http://placehold.it/150x100" alt="...">
-                            <img src="http://placehold.it/150x100" alt="...">
-                          </div>
-                        </div>
-                      </div>
+                    
                       <!-- END timeline item -->
                       <div>
                         <i class="far fa-clock bg-gray"></i>
@@ -474,54 +347,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </div>
                   <!-- /.tab-pane -->
 
-                  <div class="tab-pane" id="settings">
-                    <form class="form-horizontal">
-                      <div class="form-group row">
-                        <label for="inputName" class="col-sm-2 col-form-label">Name</label>
-                        <div class="col-sm-10">
-                          <input type="email" class="form-control" id="inputName" placeholder="Name">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
-                        <div class="col-sm-10">
-                          <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="inputName2" class="col-sm-2 col-form-label">Name</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control" id="inputName2" placeholder="Name">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="inputExperience" class="col-sm-2 col-form-label">Experience</label>
-                        <div class="col-sm-10">
-                          <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="inputSkills" class="col-sm-2 col-form-label">Skills</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <div class="offset-sm-2 col-sm-10">
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <div class="offset-sm-2 col-sm-10">
-                          <button type="submit" class="btn btn-danger">Submit</button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
                   <!-- /.tab-pane -->
                 </div>
                 <!-- /.tab-content -->
@@ -537,6 +362,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </div>
           <!-- /.col-md-6 -->
         </div>
+
+    <!-- Main content -->
+    
 
       </div><!-- /.container-fluid -->
     </div>
@@ -592,14 +420,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 
-
-
-<!-- REQUIRED SCRIPTS -->
-
-<script src="plugins/sweetalert2/sweetalert2.min.js"></script>
 <!-- Toastr -->
 <script src="plugins/toastr/toastr.min.js"></script>
 
+<script src="plugins/sweetalert2/sweetalert2.min.js"></script>
 
 <script type="text/javascript">
   $(function() {
@@ -610,19 +434,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
       timer: 2000
     });
 
-    $('.swalDefaultSuccess').click(function() {
-      Toast.fire({
-        icon: 'success',
-        title: 'Kargo İşlemini Üzerinize Aldınız.'
-      })
-    }); 
     $('.toastrDefaultSuccess').click(function() {
-      toastr.success('Kargo İşlemini Üzerinize Aldınız.')
+      toastr.success('Teslimat İşlemi Üstlenilmiştir.')
     }); 
   });
   </script>
-
-
 <script>
   $(function () {
     //Initialize Select2 Elements
@@ -695,36 +511,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
     });
 
   })
-</script>
-
-<script>
-function formatAMPM(date) {
-  var hours = date.getHours();
-  var minutes = date.getMinutes();
-  var ampm = hours >= 12 ? 'AM' : 'PM';
-  hours = hours % 12;
-  hours = hours ? hours : 12; // the hour '0' should be '12'
-  minutes = minutes < 10 ? '0'+minutes : minutes;
-  var strTime = hours + ':' + minutes + ' ' + ampm;
-  return strTime;
-}
-function post() {
- //document.getElementById('activity').appendChild('<div class="post">                       <div class="user-block">                         <img class="img-circle img-bordered-sm" src="dist/img/user1-128x128.jpg" alt="user image">                         <span class="username">                           <a href="#">Eyüp Yürüsoy</a>                           <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>                         </span>                         <span class="description">Herkes görebilir - 7:30 PM bugün</span>                       </div>                       <!-- /.user-block -->                       <p>                         Test                       </p>                        <p>                          <a href="#" class="link-black text-sm toastrDefaultSuccess"><i class="far fa-thumbs-up mr-1"></i> Yardım</a>                         <span class="float-right">                           <a href="#" class="link-black text-sm">                             <i class="far fa-comments mr-1"></i> Yorum yap (5)                           </a>                         </span>                       </p>                        <input class="form-control form-control-sm" type="text" placeholder="Yorum Yap">                     </div>');
-  const div = document.createElement('div');
-var d = new Date();
-  div.className = 'row';
-
-  div.innerHTML = `
-    <div class="post">                       <div class="user-block">                         <img class="img-circle img-bordered-sm" src="dist/img/user1-128x128.jpg" alt="user image">                         <span class="username">                           <a href="#">Eyüp Yürüsoy</a>                           <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>                         </span>                         <span class="description">Herkes görebilir - `
-    +formatAMPM(new Date)+` bugün</span>                       </div>                       <!-- /.user-block -->                       <p>                         `
-    +document.getElementById('textarea1').value+
-    `                        </p>                        <p>                          <a href="#" class="link-black text-sm toastrDefaultSuccess"><i class="far fa-thumbs-up mr-1"></i> Yardım</a>                         </div>
-  `;
-
-  document.getElementById('activity').innerHTML = div.innerHTML+document.getElementById('activity').innerHTML
- document.getElementById("textarea1").value = '';
-
-}
 </script>
 </body>
 </html>
