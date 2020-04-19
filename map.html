@@ -26,6 +26,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   </style>
   <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/build/ol.js"></script>
   <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=fetch,requestAnimationFrame,Element.prototype.classList,URL"></script>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -231,27 +232,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="content">
       <div class="container-fluid">
 
-        <h2>My Map</h2>
-        <div id="map" class="map"></div>
-        <script type="text/javascript">
-            epsg4326 = new OpenLayers.Projection("EPSG:4326")
-            map = new OpenLayers.Map({
-                div: "map",
-                displayProjection: epsg4326   // With this setting, lat and lon are displayed correctly in MousePosition and permanent anchor
-            });
-
-            //   map = new OpenLayers.Map("mapdiv");
-            map.addLayer(new OpenLayers.Layer.OSM());
-            map.addLayer(new OpenLayers.Layer.OSM("Wikimedia",
-                ["https://maps.wikimedia.org/osm-intl/${z}/${x}/${y}.png"],
-                {
-                    attribution: "&copy; <a href='http://www.openstreetmap.org/'>OpenStreetMap</a> and contributors, under an <a href='http://www.openstreetmap.org/copyright' title='ODbL'>open license</a>. <a href='https://www.mediawiki.org/wiki/Maps'>Wikimedia's new style (beta)</a>",
-                    "tileOptions": { "crossOriginKeyword": 'anonymous' }
-                })
-            );
-        </script>
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=12xiJBuZ-XenkT2aeaU1ElQEFhS1ZYVUL" width="640" height="480"></iframe>
+        <div class="col-4">
 
 
+          <script>
+              function myFunction() {
+                  alert("Bilgiler iletildi");
+              }
+          </script>
+
+          <a href="owner.html" onclick="myFunction()" class="btn btn-primary btn-block">Kurye çağır</a>
+        </div>
 
 </div>
       <!-- /.col-md-6 -->
